@@ -12,7 +12,7 @@ header {
 
 .logo {
     width: 80px;
-    margin: 20px;
+    margin: 10px;
     border: 3px solid;
     padding: 10px;
     border-radius: 25px;
@@ -23,4 +23,40 @@ h1 {
 }
 .moves img {
     width: 100px;
+}
+
+.score-board {
+    margin: 10px auto;
+    border: 3px solid;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 40px;
+    padding: 15px 20px;
+    width: 200px;
+    position: relative;
+}
+.player {
+    background: black;
+    color: white;
+    font-size: 25px;
+    padding: 5px 14px;
+    border-radius: 10px;
+}
+#user {
+    position: absolute;
+    top: 22px;
+    left: -40px;
+}
+#computer {
+    position: absolute;
+    top: 22px;
+    right: -40px;
+}
+
+.result {
+    font-size: 30px;
+}
+.result p{
+    text-align: center;
+    font-weight: bold;
 }
