@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    
-}
-
 header {
     display: flex;
     align-items: center;
@@ -95,8 +91,9 @@ h3 {
 .move {
     display: inline-block;
     margin: 0 10px;
-    border-radius: 50%;
+    border-radius: 20px;
     transition: all 0.4s ease;
+    padding: 5px;
 }
 
 .move:hover {
@@ -108,4 +105,9 @@ h3 {
     font-weight: bold;
     font-size: 30px;
     margin: 10px;
+}
+
+figcaption {
+    font-weight: bold;
+    text-align: center;
 }
