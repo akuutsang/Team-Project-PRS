@@ -21,3 +21,6 @@ h1 {
     font-weight: bold;
     font-size: 35px;
 }
+.moves img {
+    width: 100px;
+}
