@@ -8,21 +8,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    background: gray;
 }
 
 .logo {
     width: 80px;
     margin: 10px;
-    border: 3px solid;
+    border: 3px solid white;
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 30px;
 }
 h1 {
     font-weight: bold;
     font-size: 35px;
-}
-.moves img {
-    width: 100px;
+    color: white;
 }
 
 .score-board {
@@ -34,6 +33,10 @@ h1 {
     padding: 15px 20px;
     width: 200px;
     position: relative;
+}
+.round {
+    font-weight: bold;
+    font-size: 30px;
 }
 .player {
     background: black;
@@ -59,4 +62,33 @@ h1 {
 .result p{
     text-align: center;
     font-weight: bold;
+    margin-top: 25px;
+}
+
+.moves img {
+    width: 100px;
+}
+
+.moves {
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 25px;
+    
+}
+.move {
+    display: inline-block;
+    margin: 0 10px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+}
+
+.move:hover {
+    cursor: pointer;
+    background: gray;
+}
+#instruction{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    margin: 10px;
 }
