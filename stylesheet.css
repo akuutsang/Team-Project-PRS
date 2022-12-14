@@ -49,6 +49,11 @@ h3 {
 .round {
     font-weight: bold;
     font-size: 30px;
+    border: 2px solid black;
+    color: white;
+    background: gray;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgb(139, 114, 65);
 }
 .player {
     background: gray;
