@@ -8,7 +8,49 @@
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
+    <header>
+        <div>
+            <img class="logo" src="prs.png" alt="Game Logo">
+        </div>
+        <div>
+            <h1>PAPER ROCK SCISSORS</h1>
+        </div>
+    </header>
     
+    <h3>SCORE BOARD</h3>
+    <div class="score-board">
+        <div id="user" class="player">User</div>
+        <div id="computer" class="player">Comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+        <div class="round">Round : <span id="round">1</span></div>
+    </div>
+
+    <div class="result">
+        <p>Who Will Win This Round?</p>
+    </div>
+
+    <div class="moves">
+        <div class="move" id="paper">
+            <figure>
+                <img src="paper.png" alt="Paper Imge">
+            </figure>
+            <figcaption>PAPER</figcaption>
+        </div>
+        <div class="move" id="rock">
+            <figure>
+                <img src="rock.png" alt="Rock Imge">
+            </figure>
+            <figcaption>ROCK</figcaption>
+        </div>
+        <div class="move" id="scissors">
+            <figure>
+                <img src="scissors.png" alt="Scissors Imge">
+            </figure>
+            <figcaption>SCISSORS</figcaption>
+        </div>
+    </div>
+
+    <p id="instruction">Make Your Move!</p>
 
     <script src="script.js"></script>
 </body>
