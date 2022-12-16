@@ -3,10 +3,13 @@ const computer = document.querySelector("#computer");
 const userScore = document.querySelector("#user-score");
 const computerScore = document.querySelector("#computer-score");
 const round = document.querySelector("#round");
-
+const paper = document.querySelector("#paper");
+const rock = document.querySelector("#rock");
+const scissors = document.querySelector("#scissors");
 const choice = ["Paper", "Rock", "Scissors"];
 
 function computerSelection () {
     return choice[Math.floor(Math.random()*choice.length)];
 }
-// console.log(computerSelection());
+
+
