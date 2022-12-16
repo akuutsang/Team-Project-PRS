@@ -11,6 +11,8 @@ const choice = ["Paper", "Rock", "Scissors"];
 function computerSelection () {
     return choice[Math.floor(Math.random()*choice.length)];
 }
+console.log(computerSelection());
+
 
 paper.addEventListener("click", function(){
     console.log("user selected paper");
