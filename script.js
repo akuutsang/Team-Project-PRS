@@ -12,4 +12,7 @@ function computerSelection () {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
+paper.addEventListener("click", function(){
+    console.log("user selected paper");
+});
 
