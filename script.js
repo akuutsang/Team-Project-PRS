@@ -16,3 +16,6 @@ paper.addEventListener("click", function(){
     console.log("user selected paper");
 });
 
+rock.addEventListener("click", function(){
+    console.log("user selected rock")    
+});
