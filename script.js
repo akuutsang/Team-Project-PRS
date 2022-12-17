@@ -6,6 +6,7 @@ const round = document.querySelector("#round").innerHTML;
 const paper = document.querySelector("#paper");
 const rock = document.querySelector("#rock");
 const scissors = document.querySelector("#scissors");
+const result = document.querySelector(".result");
 
 function computerSelection () {
     const choice = ["Paper", "Rock", "Scissors"];
