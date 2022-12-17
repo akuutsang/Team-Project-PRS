@@ -16,12 +16,12 @@ function computerSelection () {
 
 
 paper.addEventListener("click", function(){
-    
+    lastMove = `Your Last Move Was Paper 🖐️`;
 });
 
 rock.addEventListener("click", function(){
-    console.log("user selected rock")    
+    lastMove = `Your Last Move Was Rock ✊`;    
 });
 scissors.addEventListener("click",function(){
-    console.log("user selected scissors")
+    lastMove = `Your Last Move Was Scissors ✌️`;
 } );
