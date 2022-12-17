@@ -88,28 +88,19 @@ function playRound(userChoice){
 
 //Function to initiate user selection
 function userSelection(){
-for(let i = 1; i <= 5; i++){
-        paper.addEventListener("click", function(){
-            playRound("Paper");
-            lastMove.innerHTML = `Your Last Move Was Paper 🖐️`;
-        });
+    paper.addEventListener("click", function(){
+        playRound("Paper");
+        lastMove.innerHTML = `Your Last Move Was Paper 🖐️`;
+    });
 
-        rock.addEventListener("click", function(){
-            playRound("Rock");
-            lastMove.innerHTML = `Your Last Move Was Rock ✊`;    
-        });
-        scissors.addEventListener("click",function(){
-            playRound("Scissors");
-            lastMove.innerHTML = `Your Last Move Was Scissors ✌️`;
-        } );
-    }
-    if(playerScore > compScore){
-        result.innerHTML = `Wow Congratulations you Won the Game!!!🏆🏆`;
-    } else if(playerScore < compScore){
-        result.innerHTML = `Whoaaa You Lost the Game!!!💩💩`;
-    } else{
-        result.innerHTML = `It was an Exciting Game to Decide, Its A Tie!!!🎇🎇`
-    }
+    rock.addEventListener("click", function(){
+        playRound("Rock");
+        lastMove.innerHTML = `Your Last Move Was Rock ✊`;    
+    });
+    scissors.addEventListener("click",function(){
+        playRound("Scissors");
+        lastMove.innerHTML = `Your Last Move Was Scissors ✌️`;
+    });
 }
 
 userSelection();
