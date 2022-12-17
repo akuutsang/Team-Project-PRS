@@ -15,14 +15,15 @@ function computerSelection () {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
+function userSelection(){
+    paper.addEventListener("click", function(){
+        lastMove.innerHTML = `Your Last Move Was Paper 🖐️`;
+    });
 
-paper.addEventListener("click", function(){
-    lastMove.innerHTML = `Your Last Move Was Paper 🖐️`;
-});
-
-rock.addEventListener("click", function(){
-    lastMove.innerHTML = `Your Last Move Was Rock ✊`;    
-});
-scissors.addEventListener("click",function(){
-    lastMove.innerHTML = `Your Last Move Was Scissors ✌️`;
-} );
+    rock.addEventListener("click", function(){
+        lastMove.innerHTML = `Your Last Move Was Rock ✊`;    
+    });
+    scissors.addEventListener("click",function(){
+        lastMove.innerHTML = `Your Last Move Was Scissors ✌️`;
+    } );
+}
