@@ -9,6 +9,7 @@ const scissors = document.querySelector("#scissors");
 const result = document.querySelector("#result")
 const lastMove = document.querySelector("#instruction");
 
+// ComputerSelcetion function to get computer choice
 function computerSelection () {
     const choice = ["Paper", "Rock", "Scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
