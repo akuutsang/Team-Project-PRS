@@ -38,7 +38,12 @@ function lose(userChoice, computerChoice){
 }
 
 //Create a tie function to update Scores and Rounds for user and computer
-
+function tie(userChoice, computerChoice){
+    gameRound++;
+    round.innerHTML = gameRound;
+    userScore.innerHTML = playerScore;
+    computerScore.innerHTML = compScore;
+}
 
 //PlayRound function to play rounds of the game and accept user and computer choices
 function playRound(userChoice){
