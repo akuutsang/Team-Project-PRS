@@ -20,14 +20,12 @@ function computerSelection () {
 }
 
 //Create a win function to update Scores and Rounds for user and computer
-function win(userChoice){
+function win(){
     playerScore++;
     gameRound++;
     round.innerHTML = gameRound;
     userScore.innerHTML = playerScore;
     computerScore.innerHTML = compScore;
-    document.getElementById(userChoice).classList.add("greenGlow");
-    setTimeout(function(){document.getElementById(userChoice).classList.remove("greenGlow")}, 400);
 }
 
 //Create a Lose function to update Scores and Rounds for user and computer
