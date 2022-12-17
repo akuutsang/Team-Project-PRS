@@ -15,6 +15,7 @@ function computerSelection () {
     return choice[Math.floor(Math.random()*choice.length)];
 }
 
+//Function to initiate user selection
 function userSelection(){
     paper.addEventListener("click", function(){
         lastMove.innerHTML = `Your Last Move Was Paper 🖐️`;
@@ -27,3 +28,4 @@ function userSelection(){
         lastMove.innerHTML = `Your Last Move Was Scissors ✌️`;
     } );
 }
+userSelection();
