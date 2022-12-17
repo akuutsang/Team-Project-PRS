@@ -20,16 +20,18 @@ function computerSelection () {
 }
 
 //Create a win function to update Scores and Rounds for user and computer
-function win(userChoice, computerChoice){
+function win(userChoice){
     playerScore++;
     gameRound++;
     round.innerHTML = gameRound;
     userScore.innerHTML = playerScore;
     computerScore.innerHTML = compScore;
+    document.getElementById(userChoice).classList.add("greenGlow");
+    setTimeout(function(){document.getElementById(userChoice).classList.remove("greenGlow")}, 400);
 }
 
 //Create a Lose function to update Scores and Rounds for user and computer
-function lose(userChoice, computerChoice){
+function lose(){
     compScore++;
     gameRound++;
     round.innerHTML = gameRound;
@@ -38,7 +40,7 @@ function lose(userChoice, computerChoice){
 }
 
 //Create a tie function to update Scores and Rounds for user and computer
-function tie(userChoice, computerChoice){
+function tie(){
     gameRound++;
     round.innerHTML = gameRound;
     userScore.innerHTML = playerScore;
@@ -53,13 +55,13 @@ function playRound(userChoice){
     switch (userChoice + computerChoice){
         case "PaperRock":
             result.innerHTML = `${userChoice}${userTag} Covers ${computerTag}${computerChoice}. You Won This Round!🎇`
-            win(userChoice, computerChoice);
 
         case "RockScissors":
             result.innerHTML = `${userChoice}${userTag} Smashes ${computerTag}${computerChoice}. You Won This Round!🎇`
             
         case "ScissorsPaper":
             result.innerHTML = `${userChoice}${userTag} Cuts ${computerTag}${computerChoice}. You Won This Round!🎇`
+            win(userChoice, computerChoice);
             break;
 
         case "RockPaper":
@@ -84,8 +86,6 @@ function playRound(userChoice){
             tie(userChoice, computerChoice);
             break; 
     }
-    console.log(userChoice);
-    console.log(computerChoice);
 }
 
 //Function to initiate user selection
