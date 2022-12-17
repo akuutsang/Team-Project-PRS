@@ -6,9 +6,9 @@ const round = document.querySelector("#round").innerHTML;
 const paper = document.querySelector("#paper");
 const rock = document.querySelector("#rock");
 const scissors = document.querySelector("#scissors");
-const choice = ["Paper", "Rock", "Scissors"];
 
 function computerSelection () {
+    const choice = ["Paper", "Rock", "Scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
 }
 console.log(computerSelection());
