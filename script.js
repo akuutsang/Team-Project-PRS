@@ -22,23 +22,23 @@ function playRound(userChoice){
     const computerTag = "Comp".fontsize(3).sub();
     switch (userChoice + computerChoice){
         case "PaperRock":
-            result.innerHTML = `${userChoice}${userTag} Covers ${computerTag}${computerChoice}.. You Won This Round!🎇`
+            result.innerHTML = `${userChoice}${userTag} Covers ${computerTag}${computerChoice}. You Won This Round!🎇`
 
         case "RockScissors":
-            result.innerHTML = `${userChoice}${userTag} Smashes ${computerTag}${computerChoice}.. You Won This Round!🎇`
+            result.innerHTML = `${userChoice}${userTag} Smashes ${computerTag}${computerChoice}. You Won This Round!🎇`
             
         case "ScissorsPaper":
-            result.innerHTML = `${userChoice}${userTag} Cuts ${computerTag}${computerChoice}.. You Won This Round!🎇`
+            result.innerHTML = `${userChoice}${userTag} Cuts ${computerTag}${computerChoice}. You Won This Round!🎇`
             break;
 
         case "RockPaper":
-            result.innerHTML = `${computerChoice}.${computerTag} Covers ${userTag}${userChoice}. You Lose This Round!😒`
+            result.innerHTML = `${computerChoice}${computerTag} Covers ${userTag}${userChoice}. You Lose This Round!😒`
 
         case "ScissorsRock":
-            result.innerHTML = `${computerChoice}.${computerTag} Smashes ${userTag}${userChoice}. You Lose This Round!😒`
+            result.innerHTML = `${computerChoice}${computerTag} Smashes ${userTag}${userChoice}. You Lose This Round!😒`
 
         case "PaperScissors":
-            result.innerHTML = `${computerChoice}.${computerTag} Cuts ${userTag}${userChoice}. You Lose This Round!😒`
+            result.innerHTML = `${computerChoice}${computerTag} Cuts ${userTag}${userChoice}. You Lose This Round!😒`
             break;
 
         case "RockRock":
