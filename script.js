@@ -6,7 +6,8 @@ const round = document.querySelector("#round").innerHTML;
 const paper = document.querySelector("#paper");
 const rock = document.querySelector("#rock");
 const scissors = document.querySelector("#scissors");
-const result = document.querySelector(".result");
+const result = document.querySelector(".result").innerHTML;
+console.log(result);
 
 function computerSelection () {
     const choice = ["Paper", "Rock", "Scissors"];
@@ -16,7 +17,7 @@ console.log(computerSelection());
 
 
 paper.addEventListener("click", function(){
-    console.log("user selected paper");
+    
 });
 
 rock.addEventListener("click", function(){
