@@ -29,7 +29,13 @@ function win(userChoice, computerChoice){
 }
 
 //Create a Lose function to update Scores and Rounds for user and computer
-
+function lose(userChoice, computerChoice){
+    compScore++;
+    gameRound++;
+    round.innerHTML = gameRound;
+    userScore.innerHTML = playerScore;
+    computerScore.innerHTML = compScore;
+}
 
 //Create a tie function to update Scores and Rounds for user and computer
 
