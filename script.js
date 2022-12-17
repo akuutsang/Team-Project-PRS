@@ -6,21 +6,95 @@ const round = document.querySelector("#round");
 const paper = document.querySelector("#paper");
 const rock = document.querySelector("#rock");
 const scissors = document.querySelector("#scissors");
-const choice = ["Paper", "Rock", "Scissors"];
+const result = document.querySelector("#result")
+const lastMove = document.querySelector("#instruction");
+let playerScore = 0;
+let compScore = 0;
+let gameRound = 1;
 
+
+// ComputerSelcetion function to get computer choice
 function computerSelection () {
+    const choice = ["Paper", "Rock", "Scissors"];
     return choice[Math.floor(Math.random()*choice.length)];
 }
-console.log(computerSelection());
 
+//Create a win function to update Scores and Rounds for user and computer
+function win(){
+    playerScore++;
+    gameRound++;
+    round.innerHTML = gameRound;
+    userScore.innerHTML = playerScore;
+    computerScore.innerHTML = compScore;
+}
 
-paper.addEventListener("click", function(){
-    console.log("user selected paper");
-});
+//Create a Lose function to update Scores and Rounds for user and computer
+function lose(){
+    compScore++;
+    gameRound++;
+    round.innerHTML = gameRound;
+    userScore.innerHTML = playerScore;
+    computerScore.innerHTML = compScore;
+}
 
-rock.addEventListener("click", function(){
-    console.log("user selected rock")    
-});
-scissors.addEventListener("click",function(){
-    console.log("user selected scissors")
-} );
+//Create a tie function to update Scores and Rounds for user and computer
+function tie(){
+    gameRound++;
+    round.innerHTML = gameRound;
+    userScore.innerHTML = playerScore;
+    computerScore.innerHTML = compScore;
+}
+
+//PlayRound function to play rounds of the game and accept user and computer choices
+function playRound(userChoice){
+    const computerChoice = computerSelection();
+    const userTag = "User".fontsize(3).sub();
+    const computerTag = "Comp".fontsize(3).sub();
+    switch (userChoice + computerChoice){
+        case "PaperRock":
+
+        case "RockScissors":
+            
+        case "ScissorsPaper":
+            result.innerHTML = `${userChoice}${userTag} Beats ${computerTag}${computerChoice}. You Won This Round!🎇`;
+            win();
+            break;
+
+        case "RockPaper":
+
+        case "ScissorsRock":
+
+        case "PaperScissors":
+            result.innerHTML = `${computerChoice}${computerTag} Beats ${userTag}${userChoice}. You Lose This Round!😒`;
+            lose();
+            break;
+
+        case "RockRock":
+            
+        case "ScissorsScissors":
+
+        case "PaperPaper":
+            result.innerHTML = `${userChoice}${userTag} Equals ${computerTag}${computerChoice}..This Round is a Tie!😕`;
+            tie();
+            break; 
+    }
+}
+
+//Function to initiate user selection
+function userSelection(){
+    paper.addEventListener("click", function(){
+        playRound("Paper");
+        lastMove.innerHTML = `Your Last Move Was Paper 🖐️`;
+    });
+
+    rock.addEventListener("click", function(){
+        playRound("Rock");
+        lastMove.innerHTML = `Your Last Move Was Rock ✊`;    
+    });
+    scissors.addEventListener("click",function(){
+        playRound("Scissors");
+        lastMove.innerHTML = `Your Last Move Was Scissors ✌️`;
+    });
+}
+
+userSelection();
