@@ -70,6 +70,7 @@ function playRound(userChoice){
 
         case "PaperScissors":
             result.innerHTML = `${computerChoice}${computerTag} Cuts ${userTag}${userChoice}. You Lose This Round!😒`
+            lose(userChoice, computerChoice);
             break;
 
         case "RockRock":
@@ -80,6 +81,7 @@ function playRound(userChoice){
 
         case "PaperPaper":
             result.innerHTML = `${userChoice}${userTag} Equals ${computerTag}${computerChoice}..This Round is a Tie!😕`;
+            tie(userChoice, computerChoice);
             break; 
     }
     console.log(userChoice);
