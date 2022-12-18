@@ -3,9 +3,9 @@ const computer = document.querySelector("#computer");
 const userScore = document.querySelector("#user-score");
 const computerScore = document.querySelector("#computer-score");
 const round = document.querySelector("#round");
-const paper = document.querySelector("#paper");
-const rock = document.querySelector("#rock");
-const scissors = document.querySelector("#scissors");
+const paper = document.querySelector("#Paper");
+const rock = document.querySelector("#Rock");
+const scissors = document.querySelector("#Scissors");
 const result = document.querySelector("#result")
 const lastMove = document.querySelector("#instruction");
 let playerScore = 0;
@@ -20,29 +20,35 @@ function computerSelection () {
 }
 
 //Create a win function to update Scores and Rounds for user and computer
-function win(){
+function win(userChoice){
     playerScore++;
     gameRound++;
     round.innerHTML = gameRound;
     userScore.innerHTML = playerScore;
     computerScore.innerHTML = compScore;
+    document.getElementById(userChoice).classList.add("greenGlow");
+    setTimeout(function(){document.getElementById(userChoice).classList.remove("greenGlow")}, 400);
 }
 
 //Create a Lose function to update Scores and Rounds for user and computer
-function lose(){
+function lose(userChoice){
     compScore++;
     gameRound++;
     round.innerHTML = gameRound;
     userScore.innerHTML = playerScore;
     computerScore.innerHTML = compScore;
+    document.getElementById(userChoice).classList.add("redGlow");
+    setTimeout(function(){document.getElementById(userChoice).classList.remove("redGlow")}, 400);
 }
 
 //Create a tie function to update Scores and Rounds for user and computer
-function tie(){
+function tie(userChoice){
     gameRound++;
     round.innerHTML = gameRound;
     userScore.innerHTML = playerScore;
     computerScore.innerHTML = compScore;
+    document.getElementById(userChoice).classList.add("yellowGlow");
+    setTimeout(function(){document.getElementById(userChoice).classList.remove("yellowGlow")}, 400);
 }
 
 //PlayRound function to play rounds of the game and accept user and computer choices
@@ -57,7 +63,7 @@ function playRound(userChoice){
             
         case "ScissorsPaper":
             result.innerHTML = `${userChoice}${userTag} Beats ${computerTag}${computerChoice}. You Won This Round!🎇`;
-            win();
+            win(userChoice, computerChoice);
             break;
 
         case "RockPaper":
@@ -66,7 +72,7 @@ function playRound(userChoice){
 
         case "PaperScissors":
             result.innerHTML = `${computerChoice}${computerTag} Beats ${userTag}${userChoice}. You Lose This Round!😒`;
-            lose();
+            lose(userChoice, computerChoice);
             break;
 
         case "RockRock":
@@ -75,7 +81,7 @@ function playRound(userChoice){
 
         case "PaperPaper":
             result.innerHTML = `${userChoice}${userTag} Equals ${computerTag}${computerChoice}..This Round is a Tie!😕`;
-            tie();
+            tie(userChoice, computerChoice);
             break; 
     }
 }
